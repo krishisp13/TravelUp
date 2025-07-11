@@ -1,0 +1,60 @@
+﻿@model TravelUp.Models.Product
+@{
+    ViewBag.Title = "Create Product";
+}
+<h2 class="mb-4">Add New Product</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-2 text-end">
+                @Html.LabelFor(m => m.Name)
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Enter item name" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 text-end">
+                @Html.LabelFor(m => m.Category)
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(m => m.Category, new { @class = "form-control", placeholder = "Enter category" })
+                @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 text-end">
+                @Html.LabelFor(m => m.Amount)
+            </div>
+            <div class="col-md-6">
+                @Html.TextBoxFor(m => m.Amount, new { @class = "form-control", placeholder = "Enter amount" })
+                @Html.ValidationMessageFor(m => m.Amount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-2 text-end">
+                @Html.Label("Status")
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <label class="form-check-label">
+                    @Html.CheckBoxFor(m => m.Status, new { @class = "form-check-input me-2" }) Active
+                </label>
+                @Html.ValidationMessageFor(m => m.Status, "", new { @class = "text-danger ms-2" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 text-end">
+                <input type="submit" value="Add Product" class="btn btn-primary me-2" />
+                @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-secondary" })
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,91 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-generated files
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Uncomment if you have tasks that create the project's static files in wwwroot
+#wwwroot/
+
+# NuGet
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+
+# Project user files
+*.dbmdl
+*.bak
+*.backup
+*.pdb
+*.cache
+*.zip
+*.vspscc
+*.vssscc
+*.v12.suo
+*.vs/
+
+# IIS Express
+.vs/
+*.vspscc
+*.vssscc
+*.publish.xml
+*.userprefs
+
+# Web server settings
+*.AzureSettings.json
+*.PublishSettings
+*.pubxml
+*.pubxml.user
+
+# Entity Framework
+Migrations/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Others
+_ReSharper*/
+*.DotSettings.user
+*.DotCover
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# NCrunch
+.ncrunchproject
+.ncrunchsolution
+*.ncrunch*
+
+# Local database
+*.mdf
+*.ldf
+
+# Others
+*.log
+*.DS_Store
